@@ -4,13 +4,11 @@ program geometry
   integer:: i, nsiti
   real*8::pi
   real*8,allocatable::cord(:,:), dist(:,:)
-  l=4.d0
-  c=2.d0
-  nsiti=4
+  l=4.d0 !bond lenght
+  c=2.d0 !helix pitch
+  nsiti=4 !number of sites
   pi=dacos(-1.d0)
- ! open(3,file='input.dat')
-  !read(3,*) alpha
-  alpha=pi/5
+  alpha=pi/5 !torsional angle
   r=dsqrt((l**2-c**2)/(2*(1-dcos(alpha))))
   write(*,*)alpha
   open(1,file='geometria.dat')
